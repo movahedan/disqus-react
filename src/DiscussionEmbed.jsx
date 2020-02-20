@@ -60,6 +60,8 @@ export class DiscussionEmbed extends React.Component {
             this.page.identifier = config.identifier;
             this.page.url = config.url;
             this.page.title = config.title;
+            this.page.api_key = config.api_key;
+            this.page.remote_auth_s3 = config.remote_auth_s3;
             this.callbacks.onNewComment = [
                 config.onNewComment,
             ];
@@ -80,5 +82,7 @@ DiscussionEmbed.propTypes = {
         url: PropTypes.string,
         title: PropTypes.string,
         onNewComment: PropTypes.func,
+        api_key: PropTypes.string,
+        remote_auth_s3: PropTypes.string,
     }).isRequired,
 };
